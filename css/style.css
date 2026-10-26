@@ -2068,7 +2068,7 @@ html:has(.menu-page) {
 }
 
 @media (width < 1101px) {
-  body:has(.menu-page) .back-to-top {
+  .back-to-top.back-to-top--menu-mobile {
     right: max(8px, env(safe-area-inset-right));
     top: max(20px, env(safe-area-inset-top));
     bottom: auto;
@@ -2077,14 +2077,14 @@ html:has(.menu-page) {
     pointer-events: none;
     transition: opacity 0.2s ease, visibility 0.2s, transform 0.25s ease, filter 0.25s ease;
   }
-  body:has(.menu-page) .back-to-top.is-visible {
+  .back-to-top.back-to-top--menu-mobile.is-visible {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 }
 @media (width < 1101px) and (prefers-reduced-motion: reduce) {
-  body:has(.menu-page) .back-to-top {
+  .back-to-top.back-to-top--menu-mobile {
     transition: none;
   }
 }

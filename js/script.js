@@ -53,7 +53,13 @@ if (newsList) {
 
       const arrow = document.createElement("span");
       arrow.classList.add("news__arrow");
-      arrow.textContent = "↗";
+      arrow.innerHTML = `
+        <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none"
+          stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
+          stroke-linejoin="round" focusable="false" aria-hidden="true"
+          style="display:block">
+          <path d="M5 19 19 5M5 5h14v14"/>
+        </svg>`;
       arrow.setAttribute("aria-hidden", "true");
 
       // 詳細文
@@ -344,7 +350,7 @@ if (slides.length > 1) {
   const button = document.querySelector(".back-to-top");
   if (!button) return;
   // Menuの1101px未満だけ右上固定・方向判定を使い、PCは共通処理へ戻す。
-  const isMenu = Boolean(document.querySelector(".menu-page"));
+  const isMenu = Boolean(document.querySelector("main#menu-page.menu-page"));
   const desktop = window.matchMedia("(min-width: 1101px)");
   const fixedAtTop = () => isMenu && !desktop.matches;
   const footer = document.querySelector(".footer");
@@ -418,7 +424,10 @@ if (slides.length > 1) {
   const update = () => {
     pending = false;
     button.style.setProperty("--back-to-top-avoid-y", "0px");
-    if (fixedAtTop()) {
+    // CSSも同じ判定結果を使い、Menu以外へ専用の表示モードを適用しない。
+    const menuMode = fixedAtTop();
+    button.classList.toggle("back-to-top--menu-mobile", menuMode);
+    if (menuMode) {
       updateMenuVisibility();
       if (button.classList.contains("is-visible")) avoidImportantContent();
       return;
