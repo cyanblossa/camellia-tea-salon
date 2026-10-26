@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Camellia Tea Salonの想い、こだわりの紅茶、アンティークに囲まれた空間をご紹介します。"
+    />
+    <title>About Us | Camellia Tea Salon</title>
+    <link rel="icon" type="image/svg+xml" sizes="any" href="images/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <p class="site-notice">※このサイトはWeb制作の架空作品です。<br class="site-notice__mobile-br" />実在する店舗ではありません。</p>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-main">Camellia</span>
+          <span class="header__logo-sub">TEA SALON</span>
+        </a>
+
+        <!-- スマホ用メニューボタン -->
+        <button
+          class="header__toggle"
+          type="button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          aria-controls="header-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav
+          class="header__nav"
+          id="header-nav"
+          aria-label="メインナビゲーション"
+        >
+          <ul class="header__nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="afternoon-tea.html">Afternoon Tea</a></li>
+            <li><a href="index.html#access">Access</a></li>
+
+            <li class="header__instagram">
+              <span role="img" aria-label="Instagram（準備中）">
+                <svg                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="about-page" id="about-page">
+      <div class="about-page__heading">
+        <h1>About Us</h1>
+        <p>私たちについて</p>
+      </div>
+      <div class="about-page__hero">
+        <img src="images/space-entrance.jpg" alt="木の扉の向こうに広がる、暖かな灯りのティーサロン" width="1086" height="1448" />
+      </div>
+
+      <section class="about-page__section" aria-labelledby="story-title">
+        <div class="about-page__copy">
+          <h2 id="story-title">Our Story</h2>
+          <p class="about-page__lead">紅茶の香りに、心ほどけるひととき。</p>
+          <div class="about-page__text">
+            <p>Camellia Tea Salonは、紅茶の香りとともに、<br class="about-page__story-mobile-br" />日常から少し離れた穏やかなひとときを<br class="about-page__story-mobile-br" />お届けするティーサロンです。</p>
+            <p>英国アンティークの落ち着いた空間に、<br class="about-page__story-mobile-br" />ほんの少しフランスの<br class="about-page__pc-br" />洗練を添えて、<br class="about-page__story-mobile-br" />おひとりでも、大切な方とでも、<br class="about-page__pc-br about-page__story-mobile-br" />心地よく過ごせる場所を目指しました。</p>
+            <p>どうぞお気に入りの一杯とともに、<br class="about-page__story-mobile-br" />ゆっくりとした午後を<br class="about-page__pc-br" />お楽しみください。</p>
+          </div>
+        </div>
+        <img class="about-page__photo" src="images/story.jpg" alt="窓辺のアンティークテーブルに並ぶ紅茶とアフタヌーンティー" width="1145" height="1374" loading="lazy" />
+      </section>
+
+      <section class="about-page__section about-page__section--reverse" aria-labelledby="tea-title">
+        <div class="about-page__copy">
+          <h2 id="tea-title">Our Tea</h2>
+          <p class="about-page__lead">一杯の紅茶に、心を込めて。</p>
+          <div class="about-page__text">
+            <p>茶葉の豊かな風味を、<br class="about-page__pc-br" />一杯ずつ<br class="about-page__tea-mobile-br" />丁寧に引き出して。</p>
+            <p>定番の紅茶から、季節を感じるブレンドまで、<br class="about-page__pc-br about-page__tea-mobile-br" />その日の気分に寄り添う一杯をご用意しています。</p>
+            <p>アンティークの器に注がれる紅茶とともに、<br class="about-page__pc-br about-page__tea-mobile-br" />ゆっくりと流れる時間をお楽しみください。</p>
+          </div>
+        </div>
+        <img class="about-page__photo" src="images/our-tea.jpg" alt="花柄のティーカップに注がれた紅茶と香り豊かな茶葉" width="1145" height="1374" loading="lazy" />
+      </section>
+
+      <section class="about-page__section" aria-labelledby="space-title">
+        <div class="about-page__copy">
+          <h2 id="space-title">Our Space</h2>
+          <p class="about-page__lead">時を重ねた美しさに、包まれて。</p>
+          <div class="about-page__text">
+            <p>英国アンティークの家具が並ぶ、どこか懐かしく<br class="about-page__pc-br" />温もりのある空間。</p>
+            <p>深い緑の椅子や木の風合いを感じるテーブル、<br class="about-page__pc-br" />やわらかな灯りが、穏やかな時間を演出します。</p>
+            <p>おひとりでも、大切な方とでも。日常の喧騒を忘れて、<br class="about-page__pc-br" />思い思いのひとときをお過ごしください。</p>
+          </div>
+        </div>
+        <img class="about-page__photo" src="images/space-lamp.jpg" alt="花々とアンティーク家具を照らす真鍮のテーブルランプ" width="1122" height="1402" loading="lazy" />
+      </section>
+
+      <section class="about-page__gallery" aria-label="店内の写真ギャラリー">
+        <div class="about-page__gallery-viewport" tabindex="0" role="region" aria-label="横にスクロールして店内の写真を見る" aria-describedby="gallery-help">
+          <div class="about-page__gallery-track">
+            <img src="images/space-tea-can.jpg" alt="色とりどりの茶缶が並ぶ木製の棚" width="1536" height="1024" loading="lazy" />
+            <img src="images/space-fireplace.jpg" alt="絵画と花に囲まれた暖炉" width="1086" height="1448" loading="lazy" />
+            <img src="images/space-window.jpg" alt="やわらかな日差しが差し込む窓辺" width="1086" height="1448" loading="lazy" />
+            <img src="images/space-chair.jpg" alt="花柄の布を張ったアンティークチェア" width="1122" height="1402" loading="lazy" />
+            <img src="images/space-counter.jpg" alt="暖かな灯りと花々に彩られた木製カウンター" width="1086" height="1448" loading="lazy" />
+          </div>
+        </div>
+        <div class="about-page__gallery-controls">
+          <p id="gallery-help">横にスクロールしてご覧いただけます</p>
+          <button class="about-page__gallery-toggle" type="button" hidden>自動スクロールを停止</button>
+        </div>
+      </section>
+
+      <section class="about-page__invitation" aria-labelledby="invitation-title">
+        <h2 id="invitation-title">Invitation</h2>
+        <p class="about-page__lead">あなたの日常に、心ほどけるひとときを。</p>
+        <div class="about-page__text">
+          <p>一杯の紅茶と、季節のスイーツ。<br />あなただけのティータイムを。</p>
+          <p>ふらりと立ち寄りたくなる、<br />そんな場所でありますように。</p>
+        </div>
+        <a class="about-page__button" href="menu.html">View Menu<span aria-hidden="true">→</span></a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <a href="index.html" class="footer__logo"> Camellia Tea Salon </a>
+
+          <nav class="footer__nav" aria-label="フッターナビゲーション">
+            <ul class="footer__nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" aria-current="page">About</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="afternoon-tea.html">Afternoon Tea</a></li>
+              <li><a href="index.html#access">Access</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__bottom">
+          <small> &copy; 2026 Camellia Tea Salon. All Rights Reserved. </small>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="ページ上部へ戻る" hidden>
+      <svg class="back-to-top__teapot" width="80" height="64" viewBox="0 0 80 64" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <g class="back-to-top__silhouette" stroke-width="1.5">
+          <path fill-rule="evenodd" d="M57 22C77 13 82 46 62 48L58 42C72 43 74 24 60 29ZM63 27C70 24 73 39 64 41L63 38C68 36 68 30 63 31Z" />
+          <path d="M26 29C16 31 15 22 5 22L9 30C15 31 12 44 26 46Z" />
+          <path d="M27 23C22 29 19 34 20 42C21 52 30 56 42 56C54 56 62 51 63 42C64 34 60 28 55 23Z" />
+          <path d="M26 24C27 17 33 14 41 14C49 14 55 17 57 24Z" />
+          <path d="M38 14V10C38 7 44 7 44 10V14" />
+          <path d="M30 55L28 59H55L53 55" />
+        </g>
+        <path class="back-to-top__arrow" d="M34 39L41 32L48 39M41 32V48" fill="none" stroke="currentColor" stroke-width="1.7" />
+      </svg>
+    </button>
+  </body>
+</html>

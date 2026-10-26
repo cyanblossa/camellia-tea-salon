@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Camellia Tea Salonのメニュー。香り豊かな紅茶と、心を込めて作るスイーツをご紹介します。"
+    />
+    <title>Menu | Camellia Tea Salon</title>
+    <link rel="icon" type="image/svg+xml" sizes="any" href="images/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <p class="site-notice">※このサイトはWeb制作の架空作品です。<br class="site-notice__mobile-br" />実在する店舗ではありません。</p>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-main">Camellia</span>
+          <span class="header__logo-sub">TEA SALON</span>
+        </a>
+
+        <!-- スマホ用メニューボタン -->
+        <button
+          class="header__toggle"
+          type="button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          aria-controls="header-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav
+          class="header__nav"
+          id="header-nav"
+          aria-label="メインナビゲーション"
+        >
+          <ul class="header__nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html" aria-current="page">Menu</a></li>
+            <li><a href="afternoon-tea.html">Afternoon Tea</a></li>
+            <li><a href="index.html#access">Access</a></li>
+
+            <li class="header__instagram">
+              <span role="img" aria-label="Instagram（準備中）">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="menu-page" id="menu-page">
+      <div class="menu-page__heading">
+        <h1>Menu</h1>
+        <p>メニューのご案内</p>
+      </div>
+
+      <section class="menu-page__tea" id="tea" aria-labelledby="menu-tea-title">
+        <div class="menu-page__section-heading">
+          <h2 id="menu-tea-title">Tea</h2>
+          <p>紅茶</p>
+        </div>
+        <div class="menu-page__tea-gallery" role="region" aria-label="紅茶の写真" tabindex="0">
+          <div class="menu-page__tea-slide" id="menu-tea-photo-1"><img src="images/tea-stra.jpg" alt="ストレートティー" width="1122" height="1402" /></div>
+          <div class="menu-page__tea-slide" id="menu-tea-photo-2"><img src="images/tea-milk.jpg" alt="ミルクティー" loading="lazy" width="1122" height="1402" /></div>
+          <div class="menu-page__tea-slide" id="menu-tea-photo-3"><img src="images/tea-lim.jpg" alt="レモンティー" loading="lazy" width="1122" height="1402" /></div>
+        </div>
+        <div class="menu-page__tea-dots" role="group" aria-label="表示する紅茶の写真" hidden>
+          <button class="menu-page__tea-dot" type="button" aria-label="紅茶の写真1を表示" aria-controls="menu-tea-photo-1" aria-current="true"></button>
+          <button class="menu-page__tea-dot" type="button" aria-label="紅茶の写真2を表示" aria-controls="menu-tea-photo-2"></button>
+          <button class="menu-page__tea-dot" type="button" aria-label="紅茶の写真3を表示" aria-controls="menu-tea-photo-3"></button>
+        </div>
+
+        <div class="menu-page__drinks">
+          <section class="menu-page__drink-group" aria-labelledby="menu-drink-1">
+            <h3 id="menu-drink-1">Classic Tea</h3>
+            <p class="menu-page__category-ja">紅茶</p>
+            <dl class="menu-page__drink-list">
+              <div class="menu-page__drink-row"><dt>ダージリン</dt><dd>800円</dd></div>
+              <div class="menu-page__drink-row"><dt>アッサム</dt><dd>750円</dd></div>
+              <div class="menu-page__drink-row"><dt>ウバ</dt><dd>800円</dd></div>
+              <div class="menu-page__drink-row"><dt>ニルギリ</dt><dd>750円</dd></div>
+              <div class="menu-page__drink-row"><dt>イングリッシュブレックファースト</dt><dd>800円</dd></div>
+            </dl>
+          </section>
+          <section class="menu-page__drink-group" aria-labelledby="menu-drink-2">
+            <h3 id="menu-drink-2">Flavored Tea</h3>
+            <p class="menu-page__category-ja">フレーバーティー</p>
+            <dl class="menu-page__drink-list">
+              <div class="menu-page__drink-row"><dt>アールグレイ</dt><dd>800円</dd></div>
+              <div class="menu-page__drink-row"><dt>アップルティー</dt><dd>800円</dd></div>
+              <div class="menu-page__drink-row"><dt>ピーチティー</dt><dd>800円</dd></div>
+              <div class="menu-page__drink-row"><dt>レモンティー</dt><dd>800円</dd></div>
+              <div class="menu-page__drink-row"><dt>季節のフレーバーティー</dt><dd>850円</dd></div>
+            </dl>
+          </section>
+          <section class="menu-page__drink-group" aria-labelledby="menu-drink-3">
+            <h3 id="menu-drink-3">Tea Arrangement</h3>
+            <p class="menu-page__category-ja">アレンジティー</p>
+            <dl class="menu-page__drink-list">
+              <div class="menu-page__drink-row"><dt>ロイヤルミルクティー</dt><dd>900円</dd></div>
+              <div class="menu-page__drink-row"><dt>チャイ</dt><dd>850円</dd></div>
+              <div class="menu-page__drink-row"><dt>アイスティー</dt><dd>750円</dd></div>
+            </dl>
+          </section>
+          <section class="menu-page__drink-group" aria-labelledby="menu-drink-4">
+            <h3 id="menu-drink-4">Other Drinks</h3>
+            <p class="menu-page__category-ja">その他のお飲み物</p>
+            <dl class="menu-page__drink-list">
+              <div class="menu-page__drink-row"><dt>ブレンドコーヒー</dt><dd>650円</dd></div>
+              <div class="menu-page__drink-row"><dt>アイスコーヒー</dt><dd>650円</dd></div>
+              <div class="menu-page__drink-row"><dt>オレンジジュース</dt><dd>550円</dd></div>
+              <div class="menu-page__drink-row"><dt>アップルジュース</dt><dd>550円</dd></div>
+            </dl>
+          </section>
+        </div>
+      </section>
+
+      <section class="menu-page__sweets" id="sweets" aria-labelledby="menu-sweets-title">
+        <div class="menu-page__section-heading">
+          <h2 id="menu-sweets-title">Sweets</h2>
+          <p>スイーツ</p>
+        </div>
+        <div class="menu-page__sweets-grid">
+          <figure class="menu-page__sweet">
+            <div class="menu-page__sweet-image">
+              <img class="menu-page__sweet-photo" src="images/sweets-limi.jpg" alt="栗のモンブラン" loading="lazy" width="1295" height="1215" />
+              <img class="menu-page__sweet-stamp" src="images/sweets-stamp.png" alt="秋限定" loading="lazy" width="1307" height="1203" />
+            </div>
+            <figcaption><span class="menu-page__sweet-name">栗のモンブラン</span><span class="menu-page__sweet-price">850円</span></figcaption>
+          </figure>
+          <figure class="menu-page__sweet">
+            <div class="menu-page__sweet-image">
+              <img class="menu-page__sweet-photo" src="images/sweets-sco.jpg" alt="スコーン" loading="lazy" width="1122" height="1402" />
+            </div>
+            <figcaption><span class="menu-page__sweet-name">スコーン</span><span class="menu-page__sweet-price">650円</span></figcaption>
+          </figure>
+          <figure class="menu-page__sweet">
+            <div class="menu-page__sweet-image">
+              <img class="menu-page__sweet-photo" src="images/sweets-che.jpg" alt="チーズケーキ" loading="lazy" width="1122" height="1402" />
+            </div>
+            <figcaption><span class="menu-page__sweet-name">チーズケーキ</span><span class="menu-page__sweet-price">700円</span></figcaption>
+          </figure>
+          <figure class="menu-page__sweet">
+            <div class="menu-page__sweet-image">
+              <img class="menu-page__sweet-photo" src="images/sweets-choco.jpg" alt="ガトーショコラ" loading="lazy" width="1122" height="1402" />
+            </div>
+            <figcaption><span class="menu-page__sweet-name">ガトーショコラ</span><span class="menu-page__sweet-price">700円</span></figcaption>
+          </figure>
+          <figure class="menu-page__sweet">
+            <div class="menu-page__sweet-image">
+              <img class="menu-page__sweet-photo" src="images/sweets-fina.jpg" alt="フィナンシェ" loading="lazy" width="1122" height="1402" />
+            </div>
+            <figcaption><span class="menu-page__sweet-name">フィナンシェ</span><span class="menu-page__sweet-price">450円</span></figcaption>
+          </figure>
+          <figure class="menu-page__sweet">
+            <div class="menu-page__sweet-image">
+              <img class="menu-page__sweet-photo" src="images/sweets-muf.jpg" alt="ベリーマフィン" loading="lazy" width="1149" height="1369" />
+            </div>
+            <figcaption><span class="menu-page__sweet-name">ベリーマフィン</span><span class="menu-page__sweet-price">500円</span></figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <a href="index.html" class="footer__logo"> Camellia Tea Salon </a>
+
+          <nav class="footer__nav" aria-label="フッターナビゲーション">
+            <ul class="footer__nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="menu.html" aria-current="page">Menu</a></li>
+              <li><a href="afternoon-tea.html">Afternoon Tea</a></li>
+              <li><a href="index.html#access">Access</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__bottom">
+          <small> &copy; 2026 Camellia Tea Salon. All Rights Reserved. </small>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="ページ上部へ戻る" hidden>
+      <svg class="back-to-top__teapot" width="80" height="64" viewBox="0 0 80 64" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <g class="back-to-top__silhouette" stroke-width="1.5">
+          <path fill-rule="evenodd" d="M57 22C77 13 82 46 62 48L58 42C72 43 74 24 60 29ZM63 27C70 24 73 39 64 41L63 38C68 36 68 30 63 31Z" />
+          <path d="M26 29C16 31 15 22 5 22L9 30C15 31 12 44 26 46Z" />
+          <path d="M27 23C22 29 19 34 20 42C21 52 30 56 42 56C54 56 62 51 63 42C64 34 60 28 55 23Z" />
+          <path d="M26 24C27 17 33 14 41 14C49 14 55 17 57 24Z" />
+          <path d="M38 14V10C38 7 44 7 44 10V14" />
+          <path d="M30 55L28 59H55L53 55" />
+        </g>
+        <path class="back-to-top__arrow" d="M34 39L41 32L48 39M41 32V48" fill="none" stroke="currentColor" stroke-width="1.7" />
+      </svg>
+    </button>
+  </body>
+</html>
+
+

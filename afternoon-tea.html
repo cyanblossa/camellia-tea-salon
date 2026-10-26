@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Camellia Tea Salonのクラシックと季節のアフタヌーンティー。ティーフリーとともに、心ほどける午後のひとときを。"
+    />
+    <title>Afternoon Tea | Camellia Tea Salon</title>
+    <link rel="icon" type="image/svg+xml" sizes="any" href="images/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <p class="site-notice">※このサイトはWeb制作の架空作品です。<br class="site-notice__mobile-br" />実在する店舗ではありません。</p>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-main">Camellia</span>
+          <span class="header__logo-sub">TEA SALON</span>
+        </a>
+
+        <!-- スマホ用メニューボタン -->
+        <button
+          class="header__toggle"
+          type="button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          aria-controls="header-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav
+          class="header__nav"
+          id="header-nav"
+          aria-label="メインナビゲーション"
+        >
+          <ul class="header__nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="afternoon-tea.html" aria-current="page">Afternoon Tea</a></li>
+            <li><a href="index.html#access">Access</a></li>
+
+            <li class="header__instagram">
+              <span role="img" aria-label="Instagram（準備中）">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="afternoon-page" id="afternoon-page">
+      <div class="afternoon-page__intro">
+        <h1>Afternoon Tea</h1>
+        <p class="afternoon-page__subtitle">アフタヌーンティーのご案内</p>
+        <p class="afternoon-page__lead">季節のスイーツに、焼きたてのスコーン。<br />彩り豊かなセイボリーと、香り高い紅茶を添えて。<br />アンティークの空間で、<br />心ほどける午後のひとときをお過ごしください。</p>
+      </div>
+
+      <section class="afternoon-page__offering" id="classic" aria-labelledby="classic-title">
+        <div class="afternoon-page__section-heading">
+          <h2 id="classic-title">Classic Afternoon Tea</h2>
+          <p class="afternoon-page__subtitle">クラシックアフタヌーンティー</p>
+          <img class="afternoon-page__ornament" src="images/stamp-line.png" alt="" aria-hidden="true" width="2172" height="724" />
+        </div>
+        <img class="afternoon-page__photo afternoon-page__photo--classic" src="images/menu-afternoon.jpg" alt="クラシックアフタヌーンティーのティースタンドと紅茶" width="1545" height="1018" loading="lazy" />
+        <div class="afternoon-page__card">
+          <section class="afternoon-page__tier" aria-labelledby="classic-tier-1">
+            <h3 id="classic-tier-1">First Tier — Sweets</h3>
+            <p class="afternoon-page__tier-subtitle">上段｜スイーツ</p>
+            <p class="afternoon-page__description">季節の果実を使った小さなケーキや焼き菓子を、香り高い紅茶とともに。</p>
+          </section>
+          <section class="afternoon-page__tier" aria-labelledby="classic-tier-2">
+            <h3 id="classic-tier-2">Second Tier — Scones</h3>
+            <p class="afternoon-page__tier-subtitle">中段｜スコーン</p>
+            <p class="afternoon-page__description">焼きたてのスコーンに、クロテッドクリームとフルーツジャムを添えて。</p>
+          </section>
+          <section class="afternoon-page__tier" aria-labelledby="classic-tier-3">
+            <h3 id="classic-tier-3">Third Tier — Savory</h3>
+            <p class="afternoon-page__tier-subtitle">下段｜セイボリー</p>
+            <p class="afternoon-page__description">きゅうりや卵、スモークサーモンを使った、彩り豊かなフィンガーサンドイッチをご用意しました。</p>
+          </section>
+          <div class="afternoon-page__price-block">
+            <p class="afternoon-page__price">¥4,800</p>
+            <p class="afternoon-page__price-note">ティーフリー</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="afternoon-page__offering" id="seasonal" aria-labelledby="seasonal-title">
+        <div class="afternoon-page__section-heading">
+          <h2 id="seasonal-title">Seasonal Afternoon Tea</h2>
+          <p class="afternoon-page__subtitle">季節のアフタヌーンティー</p>
+          <img class="afternoon-page__ornament" src="images/stamp-line.png" alt="" aria-hidden="true" width="2172" height="724" />
+        </div>
+        <img class="afternoon-page__photo" src="images/afternoon-season.jpg" alt="季節のアフタヌーンティーのティースタンドと紅茶" loading="lazy" width="1774" height="887" />
+        <div class="afternoon-page__card">
+          <section class="afternoon-page__tier" aria-labelledby="seasonal-tier-1">
+            <h3 id="seasonal-tier-1">First Tier — Sweets</h3>
+            <p class="afternoon-page__tier-subtitle">上段｜秋のスイーツ</p>
+            <p class="afternoon-page__description">栗のモンブランを主役に、洋梨のタルトやマカロンなど、秋のスイーツを揃えました。</p>
+          </section>
+          <section class="afternoon-page__tier" aria-labelledby="seasonal-tier-2">
+            <h3 id="seasonal-tier-2">Second Tier — Scones</h3>
+            <p class="afternoon-page__tier-subtitle">中段｜スコーン</p>
+            <p class="afternoon-page__description">焼きたてのスコーンに、さつまいもクリームとりんごジャムを添えて。</p>
+          </section>
+          <section class="afternoon-page__tier" aria-labelledby="seasonal-tier-3">
+            <h3 id="seasonal-tier-3">Third Tier — Savory</h3>
+            <p class="afternoon-page__tier-subtitle">下段｜季節のセイボリー</p>
+            <p class="afternoon-page__description">スモークサーモンのサンドイッチや、きのこのキッシュなど、秋の食材を使ったセイボリーを揃えました。</p>
+          </section>
+          <div class="afternoon-page__price-block">
+            <p class="afternoon-page__price">¥5,800</p>
+            <p class="afternoon-page__price-note">ティーフリー</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="afternoon-page__information" aria-labelledby="information-title">
+        <div class="afternoon-page__section-heading">
+          <h2 id="information-title">Information</h2>
+          <p class="afternoon-page__subtitle">ご利用案内</p>
+        </div>
+        <dl class="afternoon-page__info-card">
+          <div class="afternoon-page__info-row"><dt>提供時間</dt><dd>12:00〜17:00</dd></div>
+          <div class="afternoon-page__info-row"><dt>ご利用時間</dt><dd>120分制</dd></div>
+          <div class="afternoon-page__info-row"><dt>ご予約</dt><dd>前日までのご予約制</dd></div>
+          <div class="afternoon-page__info-row"><dt>ティーフリー</dt><dd>ラストオーダーは終了30分前</dd></div>
+        </dl>
+        <div class="afternoon-page__reservation">
+          <p>アフタヌーンティーのご予約は、<br class="afternoon-page__reservation-mobile-br" />お電話にて承っております。</p>
+          <!-- 架空サイト用の仮番号。telリンクにはしない。 -->
+          <p class="afternoon-page__phone">00-0000-0000</p>
+          <p class="afternoon-page__phone-hours">電話受付時間 11:00〜17:00</p>
+          <p class="afternoon-page__fiction-notice"><span>※当サイトはWeb制作実績用の架空サイトです。</span><span>実際のご予約はできません。</span></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <a href="index.html" class="footer__logo"> Camellia Tea Salon </a>
+
+          <nav class="footer__nav" aria-label="フッターナビゲーション">
+            <ul class="footer__nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="afternoon-tea.html" aria-current="page">Afternoon Tea</a></li>
+              <li><a href="index.html#access">Access</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__bottom">
+          <small> &copy; 2026 Camellia Tea Salon. All Rights Reserved. </small>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="ページ上部へ戻る" hidden>
+      <svg class="back-to-top__teapot" width="80" height="64" viewBox="0 0 80 64" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <g class="back-to-top__silhouette" stroke-width="1.5">
+          <path fill-rule="evenodd" d="M57 22C77 13 82 46 62 48L58 42C72 43 74 24 60 29ZM63 27C70 24 73 39 64 41L63 38C68 36 68 30 63 31Z" />
+          <path d="M26 29C16 31 15 22 5 22L9 30C15 31 12 44 26 46Z" />
+          <path d="M27 23C22 29 19 34 20 42C21 52 30 56 42 56C54 56 62 51 63 42C64 34 60 28 55 23Z" />
+          <path d="M26 24C27 17 33 14 41 14C49 14 55 17 57 24Z" />
+          <path d="M38 14V10C38 7 44 7 44 10V14" />
+          <path d="M30 55L28 59H55L53 55" />
+        </g>
+        <path class="back-to-top__arrow" d="M34 39L41 32L48 39M41 32V48" fill="none" stroke="currentColor" stroke-width="1.7" />
+      </svg>
+    </button>
+  </body>
+</html>
+
+
+
+

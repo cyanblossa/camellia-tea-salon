@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Camellia Tea Salonの公式サイト。英国風の空間で、こだわりの紅茶とアフタヌーンティーをお楽しみください。"
+    />
+    <title>Camellia Tea Salon | 英国風紅茶専門店</title>
+    <link rel="icon" type="image/svg+xml" sizes="any" href="images/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <p class="site-notice">※このサイトはWeb制作の架空作品です。<br class="site-notice__mobile-br" />実在する店舗ではありません。</p>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-main">Camellia</span>
+          <span class="header__logo-sub">TEA SALON</span>
+        </a>
+
+        <!-- スマホ用メニューボタン -->
+        <button
+          class="header__toggle"
+          type="button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          aria-controls="header-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav
+          class="header__nav"
+          id="header-nav"
+          aria-label="メインナビゲーション"
+        >
+          <ul class="header__nav-list">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="afternoon-tea.html">Afternoon Tea</a></li>
+            <li><a href="#access">Access</a></li>
+
+            <li class="header__instagram">
+              <span role="img" aria-label="Instagram（準備中）">
+                <svg                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Camellia Tea Salonの店内">
+        <img
+          src="images/hero.jpg"
+          alt="アンティークな家具と花々に囲まれた英国風ティーサロンの店内"
+          class="hero__image" width="1672" height="941" />
+
+        <h1 class="hero__catch">
+          <span class="hero__catch-pc">
+            一杯の紅茶から、特別な時間がはじまる。
+          </span>
+          <span class="hero__catch-sp">
+            一杯の紅茶から、<br />
+            特別な時間がはじまる。
+          </span>
+        </h1>
+      </section>
+
+      <section class="news" id="news">
+        <div class="news__inner">
+          <div class="news__heading">
+            <h2>News</h2>
+            <p>お知らせ</p>
+          </div>
+
+          <div class="news__list" id="news-list">
+            <!-- お知らせはJavaScriptで表示します -->
+          </div>
+        </div>
+      </section>
+
+      <!-- About Camellia -->
+      <section class="about" id="about">
+        <div class="about__inner">
+          <div class="about__slideshow" role="group" aria-label="ティーサロンの写真">
+            <img
+              src="images/about-01.jpg"
+              alt="紅茶とスコーン"
+              class="about__slide is-active"
+              aria-hidden="false"
+              loading="lazy" width="1122" height="1402" />
+
+            <img
+              src="images/about-02.jpg"
+              alt="フレーバーティーとマフィン"
+              class="about__slide"
+              aria-hidden="true"
+              loading="lazy" width="1122" height="1402" />
+
+            <img
+              src="images/about-03.jpg"
+              alt="レモンティーとフィナンシェ"
+              class="about__slide"
+              aria-hidden="true"
+              loading="lazy" width="1122" height="1402" />
+
+            <img
+              src="images/about-04.jpg"
+              alt="ミルクティーとチョコレートケーキ"
+              class="about__slide"
+              aria-hidden="true"
+              loading="lazy" width="1122" height="1402" />
+
+            <img
+              src="images/about-05.jpg"
+              alt="アイスティーとチーズケーキ"
+              class="about__slide"
+              aria-hidden="true"
+              loading="lazy" width="1122" height="1402" />
+            <button class="about__slideshow-toggle" type="button" aria-label="写真の自動切り替えを一時停止" hidden>
+              <svg class="about__slideshow-pause" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor" />
+              </svg>
+              <svg class="about__slideshow-play" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="about__content">
+            <p class="about__label">About Camellia</p>
+
+            <h2 class="about__title">
+              紅茶の香りに、<br class="about__sp-br" />
+              心ほどけるひととき。
+            </h2>
+
+            <div class="about__text">
+              <p>
+                アンティーク家具と、柔らかな灯りに包まれた小さなティーサロン。
+              </p>
+
+              <p>
+                お気に入りのティーカップで味わう一杯と、
+                心を込めて作るスイーツ。
+              </p>
+
+              <p>
+                日々の忙しさを少し忘れて、
+                ゆったりとした時間をお楽しみください。
+              </p>
+            </div>
+
+            <a href="about.html" class="about__button">
+              <span>View More</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu -->
+      <section class="menu" id="menu">
+        <div class="menu__inner">
+          <div class="menu__heading">
+            <h2>Menu</h2>
+            <p>メニュー</p>
+          </div>
+
+          <div class="menu__grid">
+            <a href="menu.html#tea" class="menu__item menu__item--tea">
+              <img
+                src="images/menu-tea.jpg"
+                alt="ティーポットから紅茶を注ぐ様子" width="1254" height="1254" />
+              <span class="menu__item-title">
+                Tea
+                <span class="menu__arrow" aria-hidden="true">↗</span>
+              </span>
+            </a>
+
+            <a href="menu.html#sweets" class="menu__item menu__item--sweets">
+              <img src="images/menu-sweets.jpg" alt="チョコレートケーキ" width="1545" height="1018" />
+              <span class="menu__item-title">
+                Sweets
+                <span class="menu__arrow" aria-hidden="true">↗</span>
+              </span>
+            </a>
+
+            <a href="afternoon-tea.html" class="menu__item menu__item--afternoon">
+              <img
+                src="images/menu-afternoon.jpg"
+                alt="アフタヌーンティーセット" width="1545" height="1018" />
+              <span class="menu__item-title">
+                Afternoon Tea
+                <span class="menu__arrow" aria-hidden="true">↗</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="special-tea" id="special-tea">
+        <div class="special-tea__inner">
+          <div class="special-tea__content">
+            <p class="special-tea__label">Special Tea Time</p>
+
+            <h2 class="special-tea__title">Afternoon Tea</h2>
+
+            <p class="special-tea__lead">いつもの午後を、少し贅沢に。</p>
+
+            <div class="special-tea__text">
+              <p>
+                季節の小さなスイーツに、<br class="sp-only-br" />
+                焼きたてのスコーン。
+              </p>
+
+              <p>
+                彩り豊かな<br class="small-sp-br" />
+                フィンガーサンドイッチと、<br class="special-tea__responsive-br" />
+                香り高い紅茶をゆっくりと。
+              </p>
+
+              <p>
+                アンティークの空間で、優雅な<br class="special-tea__responsive-br" />
+                午後のひとときをお過ごしください。
+              </p>
+            </div>
+          </div>
+
+          <div class="special-tea__image">
+            <img
+              src="images/special-afternoon.jpg"
+              alt="アフタヌーンティーセット" width="1122" height="1402" />
+          </div>
+
+          <a href="afternoon-tea.html" class="special-tea__button">
+            <span>View More</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="access" id="access">
+        <div class="access__inner">
+          <div class="access__heading">
+            <h2>Access</h2>
+            <p>アクセス</p>
+          </div>
+
+          <div class="access__body">
+            <div class="access__info">
+              <h3 class="access__shop-name">Camellia Tea Salon</h3>
+
+              <dl class="access__list">
+                <div class="access__row">
+                  <dt>所在地</dt>
+                  <dd>
+                    兵庫県神戸市中央区〇〇
+                    <span class="access__note">
+                      ※当店はWeb制作実績用の架空店舗です。
+                    </span>
+                  </dd>
+                </div>
+
+                <div class="access__row">
+                  <dt>電話番号</dt>
+                  <dd>00-0000-0000</dd>
+                </div>
+
+                <div class="access__row">
+                  <dt>営業時間</dt>
+                  <dd>11:00〜18:00</dd>
+                </div>
+
+                <div class="access__row">
+                  <dt>定休日</dt>
+                  <dd>水曜日（祝日は営業）</dd>
+                </div>
+
+                <div class="access__row">
+                  <dt>交通アクセス</dt>
+                  <dd>各線三宮駅・新神戸駅方面</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="access__map-area">
+              <img
+                src="images/access-map.jpg"
+                alt="神戸市中央区周辺の地図（架空店舗の参考地図）"
+                class="access__map"
+                loading="lazy" width="1201" height="837" />
+
+              <p class="access__map-notice">※所在地・地図はポートフォリオ用の架空情報です。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <a href="index.html" class="footer__logo"> Camellia Tea Salon </a>
+
+          <nav class="footer__nav" aria-label="フッターナビゲーション">
+            <ul class="footer__nav-list">
+              <li><a href="index.html" aria-current="page">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="afternoon-tea.html">Afternoon Tea</a></li>
+              <li><a href="#access">Access</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__bottom">
+          <small> &copy; 2026 Camellia Tea Salon. All Rights Reserved. </small>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="ページ上部へ戻る" hidden>
+      <svg class="back-to-top__teapot" width="80" height="64" viewBox="0 0 80 64" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <g class="back-to-top__silhouette" stroke-width="1.5">
+          <path fill-rule="evenodd" d="M57 22C77 13 82 46 62 48L58 42C72 43 74 24 60 29ZM63 27C70 24 73 39 64 41L63 38C68 36 68 30 63 31Z" />
+          <path d="M26 29C16 31 15 22 5 22L9 30C15 31 12 44 26 46Z" />
+          <path d="M27 23C22 29 19 34 20 42C21 52 30 56 42 56C54 56 62 51 63 42C64 34 60 28 55 23Z" />
+          <path d="M26 24C27 17 33 14 41 14C49 14 55 17 57 24Z" />
+          <path d="M38 14V10C38 7 44 7 44 10V14" />
+          <path d="M30 55L28 59H55L53 55" />
+        </g>
+        <path class="back-to-top__arrow" d="M34 39L41 32L48 39M41 32V48" fill="none" stroke="currentColor" stroke-width="1.7" />
+      </svg>
+    </button>
+  </body>
+</html>
