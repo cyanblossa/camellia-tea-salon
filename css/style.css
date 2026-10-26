@@ -2077,6 +2077,16 @@ ul {
     transform: none;
   }
 }
+@supports (-webkit-touch-callout: none) {
+  @media (hover: none) and (pointer: coarse) {
+    .back-to-top {
+      filter: none;
+    }
+    .back-to-top__teapot {
+      filter: drop-shadow(0 3px 3px rgba(52, 72, 62, 0.14));
+    }
+  }
+}
 html:has(.menu-page) {
   scroll-behavior: auto;
 }

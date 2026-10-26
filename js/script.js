@@ -349,6 +349,7 @@ if (slides.length > 1) {
 (() => {
   const button = document.querySelector(".back-to-top");
   if (!button) return;
+  const footer = document.querySelector("footer");
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let pending = false;
   let returningToTop = false;
@@ -364,13 +365,26 @@ if (slides.length > 1) {
       }
     }
     // 操作中のフォーカスを失わせない。離れたら通常の表示条件に戻す。
-    button.hidden = window.scrollY < 400 && document.activeElement !== button;
+    button.hidden = (window.scrollY < 400 || footerVisible) &&
+      document.activeElement !== button;
   };
   const scheduleUpdate = () => {
     if (pending) return;
     pending = true;
     requestAnimationFrame(update);
   };
+
+  // 初回通知前も、フッターが見えているページでは表示しない。
+  let footerVisible = false;
+  if (footer) {
+    const rect = footer.getBoundingClientRect();
+    footerVisible = rect.top < document.documentElement.clientHeight && rect.bottom > 0;
+    const footerObserver = new IntersectionObserver(([entry]) => {
+      footerVisible = entry.isIntersecting;
+      scheduleUpdate();
+    });
+    footerObserver.observe(footer);
+  }
 
   button.addEventListener("click", () => {
     returningToTop = true;
