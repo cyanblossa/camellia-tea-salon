@@ -351,6 +351,7 @@ if (slides.length > 1) {
   if (!button) return;
   // Menuの1101px未満だけ右上固定・方向判定を使い、PCは共通処理へ戻す。
   const isMenu = Boolean(document.querySelector("main#menu-page.menu-page"));
+  const isAfternoon = Boolean(document.querySelector("main.afternoon-page"));
   const desktop = window.matchMedia("(min-width: 1101px)");
   const fixedAtTop = () => isMenu && !desktop.matches;
   const footer = document.querySelector(".footer");
@@ -361,6 +362,57 @@ if (slides.length > 1) {
     ".about-page__gallery-controls, .afternoon-page__reservation, .about__slideshow-toggle, .about__button, .special-tea__button, .menu-page__tea-dots"
   )];
   if (footer) protectedElements.push(footer);
+  let afternoonPosition = null;
+  const avoidAfternoonContent = () => {
+    const rect = button.getBoundingClientRect();
+    const viewport = window.visualViewport;
+    const bounds = {
+      left: (viewport?.offsetLeft || 0) + 8,
+      top: (viewport?.offsetTop || 0) + 8,
+      right: (viewport ? viewport.offsetLeft + viewport.width : window.innerWidth) - 8,
+      bottom: (viewport ? viewport.offsetTop + viewport.height : window.innerHeight) - 8
+    };
+    // コンテナの余白ではなく、予約案内の各行と操作要素を保護する。
+    const targets = [];
+    document.querySelectorAll(".afternoon-page__reservation p").forEach((element) => {
+      const range = document.createRange();
+      range.selectNodeContents(element);
+      targets.push(...range.getClientRects());
+    });
+    document.querySelectorAll(".afternoon-page__reservation a, .afternoon-page__reservation button")
+      .forEach((element) => targets.push(element.getBoundingClientRect()));
+    if (footer) targets.push(footer.getBoundingClientRect());
+    const obstacles = targets.filter((r) => r.width > 0 && r.height > 0 &&
+      r.bottom > bounds.top && r.top < bounds.bottom);
+    const safe = (position) => position.left >= bounds.left && position.top >= bounds.top &&
+      position.left + rect.width <= bounds.right && position.top + rect.height <= bounds.bottom &&
+      !obstacles.some((r) => position.left < r.right + 8 && position.left + rect.width > r.left - 8 &&
+        position.top < r.bottom + 8 && position.top + rect.height > r.top - 8);
+    const normal = { left: rect.left, top: rect.top };
+    let position = safe(normal) ? normal : null;
+    // 通常位置が空くまでは直前の安全な位置を維持し、候補間のちらつきを抑える。
+    if (!position && afternoonPosition && safe(afternoonPosition)) position = afternoonPosition;
+    if (!position) {
+      const xs = [rect.left, bounds.right - rect.width, bounds.left];
+      const ys = [rect.top, bounds.bottom - rect.height, bounds.top];
+      obstacles.forEach((r) => {
+        xs.push(r.left - 8 - rect.width, r.right + 8);
+        ys.push(r.top - 8 - rect.height, r.bottom + 8);
+      });
+      const candidates = xs.flatMap((left) => ys.map((top) => ({ left, top }))).filter(safe);
+      candidates.sort((a, b) => Math.hypot(a.left - rect.left, a.top - rect.top) -
+        Math.hypot(b.left - rect.left, b.top - rect.top));
+      position = candidates[0];
+    }
+    if (position) {
+      afternoonPosition = position === normal ? null : position;
+      button.style.setProperty("--back-to-top-avoid-x", `${position.left - rect.left}px`);
+      button.style.setProperty("--back-to-top-avoid-y", `${position.top - rect.top}px`);
+    } else {
+      afternoonPosition = null;
+      if (document.activeElement !== button) button.hidden = true;
+    }
+  };
   const avoidImportantContent = () => {
     const rect = button.getBoundingClientRect();
     const targets = protectedElements.map((element) => element.getBoundingClientRect())
@@ -424,6 +476,7 @@ if (slides.length > 1) {
   const update = () => {
     pending = false;
     button.style.setProperty("--back-to-top-avoid-y", "0px");
+    if (isAfternoon) button.style.setProperty("--back-to-top-avoid-x", "0px");
     // CSSも同じ判定結果を使い、Menu以外へ専用の表示モードを適用しない。
     const menuMode = fixedAtTop();
     button.classList.toggle("back-to-top--menu-mobile", menuMode);
@@ -453,9 +506,13 @@ if (slides.length > 1) {
     const gap = parseFloat(getComputedStyle(button).getPropertyValue("--back-to-top-gap")) || 24;
     // フッターのリンク類と重ならないよう、フッター上端の上へ退避する。
     const footerTop = footer ? footer.getBoundingClientRect().top : window.innerHeight;
-    const bottom = Math.max(gap, window.innerHeight - footerTop + gap);
+    const viewportBottom = isAfternoon && window.visualViewport
+      ? window.visualViewport.offsetTop + window.visualViewport.height : window.innerHeight;
+    const bottom = Math.max(gap, window.innerHeight - footerTop + gap,
+      window.innerHeight - viewportBottom + gap);
     button.style.setProperty("--back-to-top-bottom", `${bottom}px`);
-    avoidImportantContent();
+    if (isAfternoon) avoidAfternoonContent();
+    else avoidImportantContent();
   };
   const scheduleUpdate = () => {
     if (pending) return;
@@ -482,6 +539,10 @@ if (slides.length > 1) {
   window.addEventListener("resize", scheduleUpdate);
   window.addEventListener("load", scheduleUpdate);
   window.addEventListener("pageshow", scheduleUpdate);
+  if (isAfternoon && window.visualViewport) {
+    window.visualViewport.addEventListener("resize", scheduleUpdate);
+    window.visualViewport.addEventListener("scroll", scheduleUpdate);
+  }
   update();
 })();
 

@@ -2006,7 +2006,7 @@ ul {
 .back-to-top {
   --back-to-top-gap: 24px;
   position: fixed;
-  translate: 0 var(--back-to-top-avoid-y, 0px);
+  translate: var(--back-to-top-avoid-x, 0px) var(--back-to-top-avoid-y, 0px);
   right: max(var(--back-to-top-gap), env(safe-area-inset-right));
   bottom: max(var(--back-to-top-bottom, var(--back-to-top-gap)), env(safe-area-inset-bottom));
   z-index: 90;
