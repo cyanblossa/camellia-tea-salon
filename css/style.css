@@ -2003,12 +2003,26 @@ ul {
     scroll-behavior: auto;
   }
 }
+/* 右下の固定ボタン用に、小さな操作要素の右側へ余白を確保する。 */
+.footer__top,
+.about-page__gallery-controls {
+  padding-right: calc(84px + env(safe-area-inset-right));
+}
+
+@media (max-width: 768px) {
+  .footer__top,
+  .about-page__gallery-controls {
+    padding-right: calc(48px + env(safe-area-inset-right));
+  }
+  .about__slideshow-toggle {
+    right: calc(60px + env(safe-area-inset-right));
+  }
+}
 .back-to-top {
   --back-to-top-gap: 24px;
   position: fixed;
-  translate: var(--back-to-top-avoid-x, 0px) var(--back-to-top-avoid-y, 0px);
   right: max(var(--back-to-top-gap), env(safe-area-inset-right));
-  bottom: max(var(--back-to-top-bottom, var(--back-to-top-gap)), env(safe-area-inset-bottom));
+  bottom: max(var(--back-to-top-gap), env(safe-area-inset-bottom));
   z-index: 90;
   display: grid;
   place-items: center;
@@ -2067,27 +2081,6 @@ html:has(.menu-page) {
   scroll-behavior: auto;
 }
 
-@media (width < 1101px) {
-  .back-to-top.back-to-top--menu-mobile {
-    right: max(8px, env(safe-area-inset-right));
-    top: max(20px, env(safe-area-inset-top));
-    bottom: auto;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.2s ease, visibility 0.2s, transform 0.25s ease, filter 0.25s ease;
-  }
-  .back-to-top.back-to-top--menu-mobile.is-visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-}
-@media (width < 1101px) and (prefers-reduced-motion: reduce) {
-  .back-to-top.back-to-top--menu-mobile {
-    transition: none;
-  }
-}
 .menu-page {
   width: calc(100% - 80px);
   max-width: 1080px;
